@@ -15,6 +15,12 @@ module.exports = function(app) {
     });
   });
 
+  app.post("/api/users", function(req, res) {
+    db.User.create(req.body).then(function(db) {
+      res.json(db);
+    });
+  });
+
   // Delete an example by id
   app.delete("/api/examples/:id", function(req, res) {
     db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
