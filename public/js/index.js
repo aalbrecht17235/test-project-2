@@ -69,7 +69,8 @@ var handleFormSubmit = function(event) {
   var example = {
     text: $exampleText.val().trim(),
     description: $exampleDescription.val().trim(),
-    positive: $positiveText.val().trim()
+    positive: $positiveText.val().trim(),
+    negative: $negativeText.val().trim()
   };
 
   if (!(example.text && example.description)) {
@@ -83,6 +84,8 @@ var handleFormSubmit = function(event) {
 
   $exampleText.val("");
   $exampleDescription.val("");
+  $positiveText.val("");
+  $negativeText.val("");
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
