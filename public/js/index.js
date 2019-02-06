@@ -2,7 +2,11 @@
 var $highlight = $("#highlight");
 var $positiveText = $("#example-positive");
 var $negativeText = $("#example-negative");
-var $exampleDescription = $("#example-description");
+var $option1 = $("#option1");
+var $option2 = $("#option2");
+var $option3 = $("#option3");
+var $music = $("#music");
+var $video = $("#video");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
 
@@ -68,25 +72,34 @@ var handleFormSubmit = function(event) {
   
 
   var example = {
-    text: $highlight.val().trim(),
-    description: $exampleDescription.val().trim(),
+    highlight: $highlight.val().trim(),
     positive: $positiveText.val().trim(),
-    negative: $negativeText.val().trim()
+    negative: $negativeText.val().trim(),
+    option1: $option1.val().trim(),
+    option2: $option2.val().trim(),
+    option3: $option3.val().trim(),
+    music: $music.val().trim(),
+    video: $video.val().trim(),
+
   };
 
-  if (!(example.text && example.description)) {
-    alert("You must enter an example text and description!");
-    return;
-  }
+  // if (!(example.text && example.description)) {
+  //   alert("You must enter an example text and description!");
+  //   return;
+  // }
 
   API.saveExample(example).then(function() {
     refreshExamples();
   });
 
   $highlight.val("");
-  $exampleDescription.val("");
   $positiveText.val("");
   $negativeText.val("");
+  $option1.val("");
+  $option2.val("");
+  $option3.val("");
+  $music.val("");
+  $video.val("");
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked

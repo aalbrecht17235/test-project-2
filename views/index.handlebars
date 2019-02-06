@@ -15,12 +15,29 @@
           </div>
           <div class="form-group">
             <label for="example-negative">Negative</label>
-            <input type="text" id="example-negative" class="form-control" aria-describedby="example-text" placeholder="Record a newgative aspect of your dat">
+            <input type="text" id="example-negative" class="form-control" aria-describedby="example-text" placeholder="Record a negative aspect of your day">
           </div>
           <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder=""></textarea>
+            <label for="option1">Option 1</label>
+            <input type="text" id="option1" class="form-control" aria-describedby="example-text" placeholder="Text Here">
           </div>
+          <div class="form-group">
+            <label for="option2">Option 2</label>
+            <input type="text" id="option2" class="form-control" aria-describedby="example-text" placeholder="Text Here">
+          </div>
+          <div class="form-group">
+            <label for="option3">Option 3</label>
+            <input type="text" id="option3" class="form-control" aria-describedby="example-text" placeholder="Text Here">
+          </div>
+          <div class="form-group">
+            <label for="music">Music</label>
+            <input type="text" id="music" class="form-control" aria-describedby="example-text" placeholder="A song you liked">
+          </div>
+          <div class="form-group">
+            <label for="video">TV/Streaming</label>
+            <input type="text" id="video" class="form-control" aria-describedby="example-text" placeholder="A show you enjoyed">
+          </div>
+        
           <button id="submit" class="btn btn-primary float-right">Submit</button>
         </form>
 
@@ -29,7 +46,7 @@
         <ul id="example-list" class="list-group">
           {{#each examples}}
           <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">Monday</a>
+            <a href="example/{{this.id}}"><p>Monday</p></a>
             <button class="btn btn-danger float-right delete">ｘ</button>
           </li>
           {{/each}}
