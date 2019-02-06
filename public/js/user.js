@@ -1,6 +1,7 @@
 // Get references to page elements
 var $firstName = $("#first-name");
 var $lastName = $("#last-name");
+var $birthday = $('#birthday');
 var $username = $("#username");
 var $password = $("#password");
 var $submitBtn = $("#submit");
@@ -33,9 +34,10 @@ var handleFormSubmit = function(event) {
 
   var user = {
     firstName: $firstName.val().trim(),
-    lastName: $password.val().trim(),
-    username: $lastName.val().trim(),
-    password: $username.val().trim()
+    lastName: $lastName.val().trim(),
+    birthday: $birthday.val().trim(),
+    username: $username.val().trim(),
+    password: $password.val().trim()
   };
 
   if (!(user.firstName && user.lastName && user.username && user.password) ){
@@ -49,6 +51,7 @@ var handleFormSubmit = function(event) {
 
   $firstName.val("");
   $password.val("");
+  $birthday.val("")
   $lastName.val("");
   $username.val("");
 };

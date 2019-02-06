@@ -1,5 +1,5 @@
 // Get references to page elements
-var $exampleText = $("#example-text");
+var $highlight = $("#highlight");
 var $positiveText = $("#example-positive");
 var $negativeText = $("#example-negative");
 var $exampleDescription = $("#example-description");
@@ -68,7 +68,7 @@ var handleFormSubmit = function(event) {
   
 
   var example = {
-    text: $exampleText.val().trim(),
+    text: $highlight.val().trim(),
     description: $exampleDescription.val().trim(),
     positive: $positiveText.val().trim(),
     negative: $negativeText.val().trim()
@@ -83,7 +83,7 @@ var handleFormSubmit = function(event) {
     refreshExamples();
   });
 
-  $exampleText.val("");
+  $highlight.val("");
   $exampleDescription.val("");
   $positiveText.val("");
   $negativeText.val("");
