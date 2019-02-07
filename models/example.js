@@ -7,7 +7,8 @@ module.exports = function(sequelize, DataTypes) {
     option2: DataTypes.STRING,
     option3: DataTypes.STRING,
     music: DataTypes.STRING,
-    video: DataTypes.STRING
+    video: DataTypes.STRING,
+    uniqueNum: DataTypes.INTEGER
   });
 
   // Example.associate = function(models) {

@@ -10,6 +10,10 @@ var $video = $("#video");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
 
+
+
+var $uniqueNum = 3333
+
 // The API object contains methods for each kind of request we'll make
 var API = {
   saveExample: function(example) {
@@ -34,7 +38,24 @@ var API = {
       type: "DELETE"
     });
   }
+  //,
+  // todayExample: function (post){
+  //     return $.ajax({
+  //         url: "api/example/today/"+post,
+  //         type:"POST",
+  //         data: JSON.stringify(post)
+  //     })
+  // }
 };
+
+
+// var todayPostPull = function(event){
+//   event.preventDefault();
+//   var example = {
+//       uniqueNum: $uniqueNum
+//   }
+// }
+
 
 // refreshExamples gets new examples from the db and repopulates the list
 var refreshExamples = function() {
@@ -69,7 +90,9 @@ var refreshExamples = function() {
 // Save the new example to the db and refresh the list
 var handleFormSubmit = function(event) {
   event.preventDefault();
-  
+  // API.todayExample($uniqueNum).then(function(data) {
+  //   refreshExamples();
+  // })
 
   var example = {
     highlight: $highlight.val().trim(),
@@ -80,6 +103,7 @@ var handleFormSubmit = function(event) {
     option3: $option3.val().trim(),
     music: $music.val().trim(),
     video: $video.val().trim(),
+    uniqueNum: $uniqueNum
 
   };
 
@@ -117,3 +141,5 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+
+

@@ -6,6 +6,8 @@ var $username = $("#username");
 var $password = $("#password");
 var $submitBtn = $("#submit");
 
+
+
 // The API object contains methods for each kind of request we'll make
 var API = {
   saveExample: function (user) {
@@ -25,6 +27,7 @@ var API = {
     });
   }
 };
+
 
 
 // handleFormSubmit is called whenever we submit a new user
